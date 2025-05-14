@@ -13,4 +13,22 @@ public abstract class Product {
     public String toString() {
         return name + " (" + category + ") - $" + String.format("%.2f", price);
     }
+
+    public static class Electronics extends Product {
+        public Electronics(String name, double price) {
+            super(name, price, "Electronics");
+        }
+    }
+
+    public static class Clothing extends Product {
+        public Clothing(String name, double price) {
+            super(name, price, "Clothing");
+        }
+    }
+
+    public static class Grocery extends Product {
+        public Grocery(String name, double price) {
+            super(name, price, "Grocery");
+        }
+    }
 }
